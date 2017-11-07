@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<div ng-controller="AngularCtrlCreateTable">
+    <br />
+    <table>
+            <tr>
+                  <td>
+                     Table Name:
+                     <input type="text" style="width:94px;" ng-model="TableName" />
+                 </td>
+             </tr>       
+               
+             <tr>
+                 <td>
+                     Field1(PK):<input type="text" style="width:94px;" ng-model="Field1" />
+                     Data Type:<select data-ng-model="selectedItem1" ng-options="item1 for item1 in items1"></select>
+                 </td>
+             </tr> 
+
+             <tr>
+                 <td>
+                     Field2: <input type="text" style="width:94px;" ng-model="Field2" />
+                     Data Type: <select data-ng-model="selectedItem2" ng-options="item2 for item2 in items2"></select>
+
+                 </td>
+             </tr>
+
+             <tr>
+                 <td>
+                    Relationship to Parent Table(FK): <select data-ng-model="selectedItemParentTable" ng-options="itemPT for itemPT in itemsPT"></select>
+                 </td>
+             </tr>
+
+             <tr>
+                 <td colspan="2">
+                     <div ng-show="divGen">
+                         <input type="button" value="Generate Table" ng-click="Generator()" />
+                     </div>
+                </td>
+
+                 <td colspan="2">
+                     <div ng-show="divNewGen">
+                         <input type="button" value="Generate New Table" ng-click="GeneratorNew()" />
+
+                      </div>
+                </td>
+             </tr>
+            
+        </table>
+</div>
